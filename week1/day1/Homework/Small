@@ -1,0 +1,5 @@
+#command is git status
+
+#command is rm  argument is -rf ./Sample
+
+#command is curl  directory:/user/bin/ruby  arguments are (-e) (-fsSL) option(link)
