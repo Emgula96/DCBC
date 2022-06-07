@@ -55,10 +55,10 @@ def guessGame():
             print("Too High, try again!")
             guessLeft -= 1
         if guessLeft == 0:
-            print(" You have 0 guesses left, you lose, GET GOOD NERD!!!!!")
+            print(" You have 0 guesses left, you lose, GET GOOD NERD!!!")
             break
 
 guessGame()
-if input("Would you like to play again? (Y/N)?").lower() != "n":
+while input("Would you like to play again? (Y/N)? ").lower() != "n":
     guessGame()
 print("Goodbye")
