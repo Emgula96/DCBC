@@ -7,6 +7,7 @@ def diceRoll():
     print("It's rolling...")
     print("Its a", my_random_number)
 
+#to only enter numbers check for conditionals
 
 diceRoll()
 while input("Would you like to roll again? (Y/N)? ").lower() != "n":
