@@ -65,16 +65,24 @@
 
 # palindrom()
 
-def optimusPrime():
-    num = int(input('''check to see if a number is prime?
-    Enter your Numer: '''))
-    if num > 1:
-        for i in range(2,num):
-            if (num % i) == 0:
-                print(num, 'is is not a prime number.')
-                break
-        else:
-            print(num, 'is a prime number')
-    else:
-        print("That is not a prime number")
-optimusPrime()
+# def optimusPrime():
+#     num = int(input('''check to see if a number is prime?
+#     Enter your Numer: '''))
+#     if num > 1:
+#         for i in range(2,num):
+#             if (num % i) == 0:
+#                 print(num, 'is is not a prime number.')
+#                 break
+#         else:
+#             print(num, 'is a prime number')
+#     else:
+#         print("That is not a prime number")
+# optimusPrime()
+
+
+# hackerrank
+# freecodecamp
+# w3s coding stuff
+# hackerrank!
+# https://pynative.com/python-basic-exercise-for-beginners/
+
