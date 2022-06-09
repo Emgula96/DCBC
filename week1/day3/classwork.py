@@ -44,19 +44,6 @@
 # print (reverse)
 
 
-# nums = [2, 7, 11, 15]
-
-# def twoSum(nums, target):
-#     for i in range(len(nums)):
-#         for j in range(i+1,len(nums)):
-#             result = nums[i]+nums[j]
-#             if result == target:
-#                 return [i,j]
-#     return []
-
-# print(twoSum(nums,26))
-
-
 
 # Square the numbers in this list
 numbers = [1, 2, 3, 4, 5, 6, 7]
@@ -101,3 +88,16 @@ list4 = [5, 20, 15, 20, 25, 50, 20]
 #     if item == 20:
 #         list4.remove(20)
 # print(list4)
+
+
+# nums = [2, 7, 11, 15]
+
+# def twoSum(nums, target):
+#     for i in range(len(nums)):
+#         for j in range(i+1,len(nums)):
+#             result = nums[i]+nums[j]
+#             if result == target:
+#                 return [i,j]
+#     return []
+
+# print(twoSum(nums,26))
