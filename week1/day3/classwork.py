@@ -43,10 +43,6 @@
 # reverse = nums[::-1]
 # print (reverse)
 
-# letter = "r"
-# print(ord(letter))
-
-
 
 # nums = [2, 7, 11, 15]
 
