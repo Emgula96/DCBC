@@ -1,19 +1,10 @@
 #to do list creat study garage neighbor enviornments
-#use more while loops
 #introduce lits
 #use a dictionary
 #loop and nested loop?
 #boolean?
 #makebreakproof make user put what I want
 
-# def breakProof():
-#     while True:
-#         breakProof = intput("--->")
-#         try:
-#             myAnswer = int(myAnswer)
-#             return myAnswer
-#         except:
-#             print("Please choose a number from the options")
 
 
 # def breakProof():
@@ -21,7 +12,6 @@
 #         print("Please make a choice of 1,2,3, or 4 only")
 #         return
 
-from sys import exit
 from time import sleep
 
 def gameStart():
@@ -38,15 +28,17 @@ def gameStart():
 """)
 
     door = input("--> ")
-
+    while door != '1' and door != '2' and door != '3' and door != '4':
+        door = input("Please enter a number 1 - 4-->  ")
     if door == '1':
         kitchen()
-    elif door == '2':
+    if door == '2':
         study()
-    elif door == '3':
+    if door == '3':
         garage()
-    elif door == '4':
+    if door == '4':
         neighbors()
+
 
 def kitchen():
 
@@ -57,6 +49,7 @@ def kitchen():
     print('Very.')
     sleep(2)
     print('Hungry.')
+    sleep(2)
     print('You are overwhelmed by a foul stench')
     sleep(1.5)
     print ('''What do you do:
@@ -66,38 +59,52 @@ def kitchen():
     3. Inspect lasagna pan''')
 
     garfield = input('--> ')
+    while garfield != '1' and garfield != '2' and garfield != '3':
+        garfield = input("Please enter a number 1 - 3 -->  ")
     if garfield == "1":
         print('''Do you?
 
-        1. Shoot garfield
+        1. Shoot Garfield
         2. Fire a warning shot in the air''')
 
         gun = input('--> ')
+        while gun != '1' and gun != '2':
+            gun = input("Please enter a number 1 or 2 -->  ")
         if gun == "1":
-            print("You shoot at Garfield")
+            print("You pick up the gun and shoot Garfield")
             sleep(2)
-            print('''The bullet demolishes one of Garfield's 20 eyes he suddenly appears as a 25 foot monster with spider legs amd a dark shroud fills the room.''')
+            print('''The bullet demolishes one of Garfield's now 20 eyes. He suddenly appears as a 25 foot 
+monster with spider legs and a dark shroud fills the room.
+
+*****************************************************
+
+''')
             sleep(7)
-            print('''Garfield is largely uneffected by the bullet and responds in perfect english:''')
-            sleep(2)
-            print('Bullets...wont...work...Jon.')
+            print('''Garfield is largely unaffected by the bullet and responds in perfect english:''')
+            sleep(4)
+            print('''Bullets...wont...work...Jon.
+
+*****************************************************
+            ''')
             sleep(3)  
             print('''Garfield unhinges his jaws and everything fades to black...''')
             sleep(3)
         elif gun == '2':
             print('You fire the warning shot.')
             print('Garfield stares at the passing bullet, buying you time to escape.')
+            print('You run into the garage')
+            garage()
             #some sort of break/escape
 
     elif garfield == '2':
         print('You fill Garfields pan')
-        print('He responds" This does not satiate me, human"')
+        print('With malice in his voice, Garfield responds "This does not satiate me, human I demand more"')
         print('''What do you do?
 
         1. Beg for mercy
         2. Go to the store and buy more lasagna''')
 
-        gar2 = input('-->')
+        gar2 = input('-->' )
         if gar2 == '1':
             print('Garfield responds "I am your mercy"')
             print('Everything fades to black...')
@@ -110,15 +117,15 @@ def kitchen():
             #printbreak/end
 
     elif garfield == '3':
-        print('You walk over to the lasagna pan.')
+        print('You walk over and fill the lasagna pan.')
         print('You notice some strange remains at the bottom of the pan.')
         sleep(3)
         print('''What do you want to do?
 
-        1. Leave the room under the pretenses of getting more lasagna.)
+        1. Leave the room under the pretenses of getting more lasagna
         2. Continue inspecting pan.''')
         
-        gar3 = input('-->')
+        gar3 = input('-->' )
         if gar3 == '1':
             print('You leave the room and live the rest of your life in fear.')
         if gar3 == '2':
@@ -130,24 +137,51 @@ def kitchen():
             sleep(3)
             print("The world fades to black....")
 
+def preface():
+    print(''' This game was inspired by the Youtube series: Garfield Gameboy'd and is a horror/adventure game featuring Garfield the cat. 
+    Are you smart enough to out wit a 46 year old cat? lets find out in this decision based text game
+    
+
+    created by Ethan Gula with a very basic understanding of Python 3, copyright 2022
+    ''')
+    prefaceUser = input('Please enter "B" for back or "Q" to quit -->' )
+    while prefaceUser != 'B' and prefaceUser != 'Q':
+        input('Please input B or Q--> ' )
+    if prefaceUser == 'B':
+        mainMenu()
+    if prefaceUser == 'Q':
+        print("Goodbye" )
+        exit(0)
 
 def mainMenu():
-    print('Welcome to "Garfield: Larger than life"')
+    print('Welcome to "Garfield: Larger than life" ')
     print("""
     1. Play
     2. Preface
     3. Options
     4. Exit
     """)
-    choice = input("Indicate option by typing in the number -->")
+    choice = input("Indicate option by typing in the number --> ")
     if choice == '1':
         gameStart()
     if choice == '2':
-        backgroundstory()
+        preface()
     if choice == '3':
         options()
     if choice == '4':
-        print('Goodbye')
+        print('Goodbye' )
         Exit(0)
+
+def garage():
+    print('You stumble over something on the way into the garage ')
+
+
+
+
+
+
+
+
+#game sequence
 
 mainMenu()

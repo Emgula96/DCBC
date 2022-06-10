@@ -77,3 +77,20 @@ else:
 #     if choice != "1" or choice != "2" or choice != "3" or choice != " 4":
 #         print("Please make a choice of 1,2,3, or 4 only")
 #         return
+
+def fourOptions(input):
+    door = input("--> ")
+    print(door,"this is ")
+    while door != '1' and door != '2' and door != '3' and door != '4':
+        door = input("Please enter a number 1 - 4-->  ")
+    if door == '1':
+        kitchen()
+    if door == '2':
+        study()
+    if door == '3':
+        garage()
+    if door == '4':
+        neighbors()
+
+
+fourOptions(gun)
