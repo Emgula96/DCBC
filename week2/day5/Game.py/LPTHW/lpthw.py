@@ -5,7 +5,7 @@ print("You enter a dark room with four doors.")
 def doorNum():
     print(
     """"
-    Do you go through 
+    Do you go to  
     Door # 1  
     Door # 2
     Door # 3
@@ -60,12 +60,16 @@ elif door == '4':
     print('You enter another room full of doors')
     doorNum()
     cycle = input('-->')
-    if cycle == '1' or '2' or '3' or '4':
+    if cycle in ["1","2","3","4"]:
+    # cycle = int(input('-->'))
+    # if cycle <= 4:
         print('You continually loop through this cyle of doors..')
         sleep(3)
         print('FOREVER')
+
     else:
         print("A black hole opens in the floor and you get torn apart")
 
 else: 
-    print('You stumble around and fall on a knife and die. Goodjob!')
+    print('You stumble around and fall on a knife and die. Youre Dead!')
+

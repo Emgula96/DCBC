@@ -85,4 +85,6 @@
 # w3s coding stuff
 # hackerrank!
 # https://pynative.com/python-basic-exercise-for-beginners/
+# https://codingbat.com/python
+
 
