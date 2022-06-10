@@ -4,16 +4,29 @@
 #use a dictionary
 #loop and nested loop?
 #boolean?
+#makebreakproof make user put what I want
+
+# def breakProof():
+#     while True:
+#         breakProof = intput("--->")
+#         try:
+#             myAnswer = int(myAnswer)
+#             return myAnswer
+#         except:
+#             print("Please choose a number from the options")
 
 
-
+# def breakProof():
+#     if  != "1" or choice != "2" or choice != "3" or choice != " 4":
+#         print("Please make a choice of 1,2,3, or 4 only")
+#         return
 
 from sys import exit
 from time import sleep
 
 def gameStart():
     
-    print("You wake up in your house like any normal day.")
+    print("You wake up in your house like any normal day. ")
 
     print(
     """
@@ -23,6 +36,7 @@ def gameStart():
     3. The Garage
     4. The Neighbors
 """)
+
     door = input("--> ")
 
     if door == '1':
@@ -51,14 +65,14 @@ def kitchen():
     2. Fill his lasagna pan
     3. Inspect lasagna pan''')
 
-    garfield = input('-->')
+    garfield = input('--> ')
     if garfield == "1":
         print('''Do you?
 
         1. Shoot garfield
         2. Fire a warning shot in the air''')
 
-        gun = input('-->')
+        gun = input('--> ')
         if gun == "1":
             print("You shoot at Garfield")
             sleep(2)
@@ -125,7 +139,7 @@ def mainMenu():
     3. Options
     4. Exit
     """)
-    choice = input("-->")
+    choice = input("Indicate option by typing in the number -->")
     if choice == '1':
         gameStart()
     if choice == '2':

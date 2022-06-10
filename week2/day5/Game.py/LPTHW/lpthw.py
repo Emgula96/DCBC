@@ -73,3 +73,7 @@ elif door == '4':
 else: 
     print('You stumble around and fall on a knife and die. Youre Dead!')
 
+# def breakProof():
+#     if choice != "1" or choice != "2" or choice != "3" or choice != " 4":
+#         print("Please make a choice of 1,2,3, or 4 only")
+#         return
