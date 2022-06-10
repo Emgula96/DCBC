@@ -50,8 +50,8 @@ def gameStart():
 
 def kitchen():
 
-    print("You stumble upon Garfield")
-    print("you notice his lasagna pan is empty...")
+    print("You stumble upon Garfield.")
+    print("You notice his lasagna pan is empty...")
     print('He is hungry....')
     sleep(2)
     print('Very.')
@@ -110,8 +110,8 @@ def kitchen():
             #printbreak/end
 
     elif garfield == '3':
-        print('You walk over to the lasagna pan')
-        print('You notice some strange remains at the bottom of the pan')
+        print('You walk over to the lasagna pan.')
+        print('You notice some strange remains at the bottom of the pan.')
         sleep(3)
         print('''What do you want to do?
 
@@ -120,13 +120,13 @@ def kitchen():
         
         gar3 = input('-->')
         if gar3 == '1':
-            print('You leave the room and live the rest of your life in fear')
+            print('You leave the room and live the rest of your life in fear.')
         if gar3 == '2':
-            print("You feel a malevolant force push you into the pan")
+            print("You feel a malevolant force push you into the pan.")
             sleep(3)
             print("Garfield now seems to tower over the pan.")
             sleep(3)
-            print('He has a wide grin and says "You are the lasagna now Jon."')
+            print('He has a wide grin and says "You are the lasagna now, Jon."')
             sleep(3)
             print("The world fades to black....")
 
