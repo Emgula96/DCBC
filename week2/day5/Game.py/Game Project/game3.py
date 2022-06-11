@@ -146,7 +146,7 @@ def preface():
     ''')
     prefaceUser = input('Please enter "B" for back or "Q" to quit -->' )
     while prefaceUser != 'B' and prefaceUser != 'Q':
-        input('Please input B or Q--> ' )
+        prefaceUser = input('Please input B or Q--> ' )
     if prefaceUser == 'B':
         mainMenu()
     if prefaceUser == 'Q':
