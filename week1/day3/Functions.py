@@ -1,3 +1,6 @@
+from tkinter.tix import WINDOW
+
+
 listOfStuff = ['houst',  'car', 'backyard']
 listOfCarStuff = ['headlights, Steeringwheel','clutch']
 listOfClothes = ['shirt','pants','shoes', 'socks']
@@ -13,7 +16,7 @@ for stuff in listOfStuff:
 
 def printList(Listofthings):
     for stuff in Listofthings:
-        print(stuff + " wow")
+        print(stuff)
 
 printList(listOfStuff)
 printList(listOfCarStuff)

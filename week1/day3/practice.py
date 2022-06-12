@@ -18,4 +18,18 @@ Apple = [1,3,5,7]
 Bath= [2,4,6,8]
 
 cartProd = [(a,b) for a in Apple for b in Bath]
-print(cartProd)
+    
+Apple = [1,3,5,7]
+Bath= [2,4,6,8]   
+
+
+
+
+
+    #             def twoSum(nums, target):
+    # for i in range(len(nums)):
+    #     for j in range(i+1,len(nums)):
+    #         result = nums[i]+nums[j]
+    #         if result == target:
+    #             return [i,j]
+    # return []

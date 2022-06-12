@@ -5,7 +5,7 @@ def action(choice):
     if choice == "1":
         print("You attacked the monsetr")
         return
-    if choice != "1" or choice != "2" or choice != "3" or choice != " 4":
+    if choice != "1" and choice != "2" and choice != "3" and choice != " 4":
         print("Please make a choice of 1,2,3, or 4 only")
         return
 
