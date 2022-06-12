@@ -73,21 +73,29 @@ def kitchen():
         if gun == "1":
             print("You pick up the gun and shoot Garfield")
             sleep(2)
-            print('''The bullet demolishes one of Garfield's now 20 eyes. He suddenly appears as a 25 foot 
-monster with spider legs and a dark shroud fills the room.
+            print('''
+
+The bullet demolishes one of Garfield's now 20 eyes. He suddenly appears as a 
+25 foot monster with spider legs and a dark shroud fills the room.
 
 *****************************************************
 
 ''')
             sleep(7)
-            print('''Garfield is largely unaffected by the bullet and responds in perfect english:''')
+            print('''
+Garfield is largely unaffected by the 
+bullet and responds in perfect english:''')
             sleep(4)
-            print('''Bullets...wont...work...Jon.
+            print('''
+
+Bullets...wont...work...Jon.
 
 *****************************************************
             ''')
             sleep(3)  
-            print('''Garfield unhinges his jaws and everything fades to black...''')
+            print('''
+Garfield unhinges his jaws and everything fades to black...
+''')
             sleep(3)
         elif gun == '2':
             print('You fire the warning shot.')
@@ -98,7 +106,9 @@ monster with spider legs and a dark shroud fills the room.
 
     elif garfield == '2':
         print('You fill Garfields pan')
-        print('With malice in his voice, Garfield responds "This does not satiate me, human I demand more"')
+        print('''
+With malice in his voice, Garfield responds: 
+"This does not satiate me, human I demand more"''')
         print('''What do you do?
 
         1. Beg for mercy
@@ -111,7 +121,10 @@ monster with spider legs and a dark shroud fills the room.
 
         elif gar2 == "2":
             print('You manage to escape the house, and you set it on fire.')
-            print("Ermerging from the flames are 40ft long bat wings, Garfield flys towards the heavens never to be seen again.")
+            print('''
+Ermerging from the flames are 40ft long bat wings, 
+Garfield flys towards the heavens never to be seen again.
+            ''')
             sleep(10)
             print('For now......')
             #printbreak/end
@@ -138,11 +151,12 @@ monster with spider legs and a dark shroud fills the room.
             print("The world fades to black....")
 
 def preface():
-    print(''' This game was inspired by the Youtube series: Garfield Gameboy'd and is a horror/adventure game featuring Garfield the cat. 
-    Are you smart enough to out wit a 46 year old cat? lets find out in this decision based text game
-    
+    print(''' 
+This game was inspired by the Youtube series: Garfield Gameboy'd and is a horror/adventure game featuring Garfield the cat. 
+Are you smart enough to out wit a 46 year old cat? lets find out in this decision based text game
 
-    created by Ethan Gula with a very basic understanding of Python 3, copyright 2022
+
+created by Ethan Gula with a very basic understanding of Python 3, copyright 2022
     ''')
     prefaceUser = input('Please enter "B" for back or "Q" to quit -->' )
     while prefaceUser != 'B' and prefaceUser != 'Q':
@@ -174,10 +188,6 @@ def mainMenu():
 
 def garage():
     print('You stumble over something on the way into the garage ')
-
-
-
-
 
 
 
