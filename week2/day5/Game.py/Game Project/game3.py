@@ -13,7 +13,7 @@
 #         return
 
 from time import sleep
-
+joeinv = []
 def gameStart():
     
     print("You wake up in your house like any normal day. ")
@@ -187,8 +187,31 @@ def mainMenu():
         Exit(0)
 
 def garage():
-    print('You stumble over something on the way into the garage ')
-
+    print('You stubmle into the garage and notice the lights are flickering... ')
+    print('''What do you do?
+    1.Walk over to the electrical box
+    2.Walk over to the toolbox
+    3.Inspect the weird bag in the corner
+    ''')
+    garChoice = input('--> ')
+    while garChoice != '1' and garChoice != '2' and garChoice != '3':
+        garChoice = input("Please enter a number 1 - 3 -->  ")
+    if garChoice == "1":
+        print(''' 
+        You walk over to the electrical box, but notice it doesnt want to open
+        Do you:
+        1. Go back
+        2. Try to pry it open''')
+        elect = input('-->')
+        while elect != '1' and elect != '2':
+            elect = input("Please enter a number 1 or 2 -->  ")
+        if elect == '1':
+            garage()
+        elif elect == '2':
+            print('''
+While trying to force the box open you accidentally touch some live wires and the world fades to black...''')
+    elif garChoice == '2':
+        print('')
 
 
 
