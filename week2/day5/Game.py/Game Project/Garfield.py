@@ -13,7 +13,29 @@
 #         return
 
 from time import sleep
-joeinv = []
+
+
+
+class Character:
+    def __init__(self,name,health,attack, items):
+        self.name = name
+        self.health = health
+        self.attack = attack
+        self.items = items[0]
+    def printChar(self):
+
+        print(self.name,self.health,self.attack,self.items[0])
+
+
+megaCat = Character('Garfield', 9000, 50, ['Lasagna'] )
+Jon = Character('Jon', 200, 10, ['cigarette'])
+Oddie = Character('Oddie', 200, 10, ['dog treat'])
+Valette = Character('Valette',150, 20, ['cat toy'])
+
+Jon.printChar()
+
+
+
 def gameStart():
     
     print("You wake up in your house like any normal day. ")
@@ -161,11 +183,11 @@ created by Ethan Gula with a very basic understanding of Python 3, copyright 202
     prefaceUser = input('Please enter "B" for back or "Q" to quit -->' )
     while prefaceUser != 'B' and prefaceUser != 'Q':
         prefaceUser = input('Please input B or Q--> ' )
-    if prefaceUser == 'B':
-        mainMenu()
-    if prefaceUser == 'Q':
-        print("Goodbye" )
-        exit(0)
+        if prefaceUser == 'B':
+            mainMenu()
+        if prefaceUser == 'Q':
+            print("Goodbye" )
+            break
 
 def mainMenu():
     print('Welcome to "Garfield: Larger than life" ')
