@@ -20,14 +20,15 @@ class Character:
         self.name = name
         self.health = health
         self.attack = attack
-        self.items = items[0]
+        self.items = items
 
     def addItmes(self, items):
         self.item.append(items)
 
     def printChar(self):
-        print(self.name,self.health,self.attack,self.items[0])
-
+        # print(self.name,self.health,self.attack,self.items[0])
+        print(f'name:{self.name}, Health:{self.health}, Attack{self.attack},Items{self.items}')
+    
     def hitByAttack(self, damage):
         self.health =- damage     
         print(f'Your new health is {self.health}')
@@ -44,7 +45,7 @@ Valette = Character('Valette',150, 20, ['cat toy'])
 
 
 Jon.printChar()
-
+print(megaCat.health,'hp')
 
 
 def gameStart():
