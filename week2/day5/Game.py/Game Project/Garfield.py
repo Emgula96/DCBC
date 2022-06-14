@@ -1,18 +1,20 @@
-#to do list creat study garage neighbor enviornments
-#introduce lits
-#use a dictionary
-#loop and nested loop?
-#boolean?
-#makebreakproof make user put what I want
+#minimum
+#1 class at a minimum
+# functions
+# for loops
+# while loops
+# list
+# variables
+# adding/removing aspects about your class
+# the ability to exit the game
+# the ability to replay the game
+# clean code
+# write article about what I dids  'dev.to'
 
-
-
-# def breakProof():
-#     if  != "1" or choice != "2" or choice != "3" or choice != " 4":
-#         print("Please make a choice of 1,2,3, or 4 only")
-#         return
+# aim for mvp first
 
 from time import sleep
+
 
 
 class Character:
@@ -23,29 +25,30 @@ class Character:
         self.items = items
 
     def addItmes(self, items):
-        self.item.append(items)
+        self.items.append(items)
+        print(f'Your current items are now..{items}')
 
     def printChar(self):
         # print(self.name,self.health,self.attack,self.items[0])
         print(f'name:{self.name}, Health:{self.health}, Attack{self.attack},Items{self.items}')
     
     def hitByAttack(self, damage):
-        self.health =- damage     
-        print(f'Your new health is {self.health}')
+        self.health -= damage     
+        
 
-    def attackBigBoi(self, Garhp):
-        Garhp =- self.attack
-        print(f'Garfields new hp is{Garhp}')
+    def attackBigBoi(self, foe):
+        foe.hitByAttack(self.attack)
+        
+def garfieldhit():
+    print(f'Garfields new health is {megaCat.health}')
+
+
 
 megaCat = Character('Garfield', 9000, 50, ['Lasagna'])
 Jon = Character('Jon', 200, 10, ['cigarette'])
-Oddie = Character('Oddie', 200, 10, ['dog treat'])
-Valette = Character('Valette',150, 20, ['cat toy'])
 
-
-
-Jon.printChar()
-print(megaCat.health,'hp')
+# Oddie = Character('Oddie', 200, 10, ['dog treat'])
+# Valette = Character('Valette',150, 20, ['cat toy'])
 
 
 def gameStart():
@@ -54,7 +57,8 @@ def gameStart():
 
     print(
     """
-    Do you go to the 
+    Do you want to go to the
+    
     1. The Kitchen  
     2. The Study 
     3. The Garage
@@ -65,17 +69,15 @@ def gameStart():
     while door != '1' and door != '2' and door != '3' and door != '4':
         door = input("Please enter a number 1 - 4-->  ")
     if door == '1':
-        kitchen()
+        kitchenEntry()
     if door == '2':
         study()
     if door == '3':
         garage()
     if door == '4':
-        neighbors()
+        outside()
 
-
-def kitchen():
-
+def kitchenEntry():
     print("You stumble upon Garfield.")
     print("You notice his lasagna pan is empty...")
     print('He is hungry....')
@@ -84,13 +86,17 @@ def kitchen():
     sleep(2)
     print('Hungry.')
     sleep(2)
-    print('You are overwhelmed by a foul stench')
+    print('You are overwhelmed by a foul stench\n')
+    print('***********************************')
     sleep(1.5)
     print ('''What do you do:
 
-    1. Grab the nearset gun
+    1. Grab the nearby gun
     2. Fill his lasagna pan
     3. Inspect lasagna pan''')
+    kitchen()
+
+def kitchen():
 
     garfield = input('--> ')
     while garfield != '1' and garfield != '2' and garfield != '3':
@@ -137,6 +143,9 @@ Garfield unhinges his jaws and everything fades to black...
             print('You run into the garage')
             garage()
             #some sort of break/escape
+        else:
+            print('Please only type a number 1 - 3')
+        
 
     elif garfield == '2':
         print('You fill Garfields pan')
@@ -202,23 +211,42 @@ created by Ethan Gula with a very basic understanding of Python 3, copyright 202
             break
 
 def mainMenu():
-    print('Welcome to "Garfield: Larger than life" ')
-    print("""
-    1. Play
-    2. Preface
-    3. Options
-    4. Exit
-    """)
-    choice = input("Indicate option by typing in the number --> ")
-    if choice == '1':
-        gameStart()
-    if choice == '2':
-        preface()
-    if choice == '3':
-        options()
-    if choice == '4':
-        print('Goodbye' )
-        Exit(0)
+    while True:
+        print('\n   Welcome to "GARFIELD: LARGER THAN LIFE" ')
+        sleep(3)
+        print("""
+                Main Menu\n\n
+        1. Play
+        2. Preface
+        3. Options
+        4. Exit
+        """)
+        choice = input("Indicate how you wish to proceed by typing in the number you've chosen \n --> ")
+        if choice == '1':
+            gameStart()
+        if choice == '2':
+            preface()
+        if choice == '3':
+            options()
+        if choice == '4':
+            print('Goodbye' )
+            break
+        else:
+            print('Please choose a number 1- 4\n')
+
+def death():
+    while True:
+        print('Garfield unhinges his jaws and the world fades to black')
+        sleep(5)
+        print('You lose...\n')
+        palyAgain = input('Want to play again? Y/N\n -->')
+        if palyAgain == 'Y':
+            mainMenu()
+        elif palyAgain == 'N':
+            print('Garfieled wickedly waves goodbye')
+            break
+        else: 
+            print('Please enter "Y"or "N" \n -->')
 
 def garage():
     print('You stubmle into the garage and notice the lights are flickering... ')

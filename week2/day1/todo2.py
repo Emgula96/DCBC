@@ -86,7 +86,10 @@ class Todo:
 
     def deleteItem(self):
         ethantodo.viewItems()
-        delete = int(input('What item do you need to delete, please enter the number?\n'))
+        delete =(input('What item do you need to delete, please enter the number?\n'))
+        while delete.isnumeric() == False:
+            print('Please enter a number only')
+            delete =(input('What item do you need to delete, please enter the number?\n'))
         delIndex = delete - 1
         taskToDelete = self.toDoList[delIndex]
         del self.toDoList[delIndex]
