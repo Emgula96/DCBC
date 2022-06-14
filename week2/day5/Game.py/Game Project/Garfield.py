@@ -27,7 +27,7 @@ class Character:
 
     def addItmes(self, items):
         self.items.append(items)
-        print(f'Your current items are now..{items}')
+        print(f'Your current items are now..{self.items}')
 
     def printChar(self):
         # print(self.name,self.health,self.attack,self.items[0])
@@ -61,6 +61,7 @@ def gameStart():
     sleep(3)
     print("He is hiding somewhere in the house.....be careful.")
     sleep(5)
+    print('The lights in the house are continuing to flicker')
     print('Oddie has gone missing and you have been locked in your room for protection.')
     sleep(5)
     print('You need to put an end to this nightmare, once and for all.') 
@@ -81,7 +82,7 @@ def gameStart():
     if door == '1':
         kitchenEntry()
     if door == '2':
-        garageintro()
+        garageOptions()
     if door == '3':
         outside()
     if door == '4':
@@ -141,23 +142,29 @@ bullet and responds in perfect english:''')
 
             stars()
             sleep(3)  
-            print('Garfield now lunges forward and attacks')
+            print('Garfield now lunges forward and attacks, causing damage and forcing the gun out of your hand')
             Jon.hitByAttack(megaCat.attack)
             print(f'Your health is now {Jon.health}')
             sleep(3)
+            print('You run to the garag')
+            garageOptions()
         elif gun == '2':
             print('You fire the warning shot.')
             print('Garfield stares at the passing bullet, buying you time to escape.')
             print('You run into the garage')
-            garageintro()
+            garageOptions()
             #some sort of break/escape
         else:
             print('Please only type a number 1 - 2')
         
-
+#KITCHEN 2nd OPTIon
     elif garfield == '2':
-        print('You search the drawers')
-
+        #fix item counter here ==0 print drawers are empty
+        drawers = ['Lighter']
+        print(f'You search the drawers and find a {drawers}')
+        Jon.addItmes('Lighter')
+        kitchen()
+#KITCHEN OPTION 3
     elif garfield == '3':
         print('You walk over and peer into the lasagna pan. The smell grows more intense.')
         print('You notice some strange remains at the bottom of the pan.')
@@ -169,9 +176,11 @@ bullet and responds in perfect english:''')
         ''')
         
         gar3 = input('-->' )
+        while gar3 != '1' and gar3 != '2':
+            gar3 = input("Please enter a number 1 or 2 -->  ")   
         if gar3 == '1':
             kitchen()
-        if gar3 == '2':
+        elif gar3 == '2':
             print("You feel a malevolant force push you into the pan.")
             sleep(3)
             print("Garfield now seems to tower over the pan.")
@@ -179,7 +188,7 @@ bullet and responds in perfect english:''')
             print('He has a wide grin and says "You are the lasagna now, Jon."')
             sleep(3)
             death()
-
+            
 def preface():
     print(''' 
 This game was inspired by the Youtube series: Garfield Gameboy'd and is a horror/adventure game featuring Garfield the cat. 
@@ -207,34 +216,31 @@ def mainMenu():
     3. Exit
     """)
     choice = input("Indicate how you wish to proceed by typing in the number you've chosen \n --> ")
+    while choice != '1' and choice != '2' and choice !='3':
+        choice = input('Please choose a number 1- 3\n')
     if choice == '1':
-        gameStart()
+            gameStart()
     elif choice == '2':
-        preface()
+            preface()
     elif choice == '3':
-        print('Goodbye' )
-        
-    else:
-        print('Please choose a number 1- 3\n')
+            print('Goodbye' )
 
 def death():
-    while True:
-        print('Garfield unhinges his jaws and the world fades to black')
-        sleep(5)
-        print('You lose...\n')
-        palyAgain = input('Want to play again? Y/N\n -->')
-        if palyAgain == 'Y':
-            mainMenu()
-        elif palyAgain == 'N':
-            print('Garfieled wickedly waves goodbye')
-            break
-        else: 
-            print('Please enter "Y"or "N" \n -->')
+    print('Garfield unhinges his jaws and the world fades to black')
+    sleep(5)
+    print('You lose...\n')
+    palyAgain = input('Want to play again? Y/N\n -->')
+    while palyAgain != 'Y' and palyAgain != 'N':
+        input('Please type "Y" or "N"\n -->')
+    if palyAgain == 'Y':
+        mainMenu()
+    elif palyAgain == 'N':
+        print('Garfieled wickedly waves goodbye')
 
-def garageintro():
-    print('You stumble into the garage and notice the lights are flickering... ')
-    garageOptions()
+
+
 def garageOptions():
+    print('You are now in the Garage')
     print('''What do you do?
         1. Walk over to the electrical box
         2. Fill a gasoline canister
