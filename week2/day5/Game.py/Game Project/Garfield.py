@@ -15,22 +15,33 @@
 from time import sleep
 
 
-
 class Character:
-    def __init__(self,name,health,attack, items):
+    def __init__(self,name,health,attack,items):
         self.name = name
         self.health = health
         self.attack = attack
         self.items = items[0]
-    def printChar(self):
 
+    def addItmes(self, items):
+        self.item.append(items)
+
+    def printChar(self):
         print(self.name,self.health,self.attack,self.items[0])
 
+    def hitByAttack(self, damage):
+        self.health =- damage     
+        print(f'Your new health is {self.health}')
 
-megaCat = Character('Garfield', 9000, 50, ['Lasagna'] )
+    def attackBigBoi(self, Garhp):
+        Garhp =- self.attack
+        print(f'Garfields new hp is{Garhp}')
+
+megaCat = Character('Garfield', 9000, 50, ['Lasagna'])
 Jon = Character('Jon', 200, 10, ['cigarette'])
 Oddie = Character('Oddie', 200, 10, ['dog treat'])
 Valette = Character('Valette',150, 20, ['cat toy'])
+
+
 
 Jon.printChar()
 
