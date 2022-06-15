@@ -5,51 +5,66 @@
 
 # aim for mvp first
 
-def GarfieldLargerThanLife():
-    from time import sleep
-    import random
-    def stars():
-        print('*****************************************************')
+from time import sleep
+import random
 
-    class Character:
-        def __init__(self,name,health,attack,items):
-            self.name = name
-            self.health = health
-            self.attack = attack
-            self.items = items
+class Character:
+    def __init__(self,name,health,attack,items):
+        self.name = name
+        self.health = health
+        self.attack = attack
+        self.items = items
 
-        def addItmes(self, items):
-            self.items.append(items)
-            print(f'Your current items are now..{self.items}')
+    def addItmes(self, items):
+        self.items.append(items)
+        print(f'Your current items are now..{self.items}')
 
-        def printChar(self):
-            # print(self.name,self.health,self.attack,self.items[0])
-            print(f'Name: {self.name}, Health: {self.health}, Attack: {self.attack}, Items: {self.items}')
+    def printChar(self):
+        # print(self.name,self.health,self.attack,self.items[0])
+        print(f'Name: {self.name}, Health: {self.health}, Attack: {self.attack}, Items: {self.items}')
+    
+    def hitByAttack(self, damage):
+        self.health -= damage 
+        if self.health == 0:
+            death()
+            exit(0)
+
+    def attackBigBoi(self, foe):
+        foe.hitByAttack(self.attack)
         
-        def hitByAttack(self, damage):
-            self.health -= damage 
-            if self.health == 0:
-                death()
-                exit(0)
+def garfieldhit():
+    print(f'Garfields new health is {megaCat.health}')
 
-        def attackBigBoi(self, foe):
-            foe.hitByAttack(self.attack)
-            
-    def garfieldhit():
-        print(f'Garfields new health is {megaCat.health}')
-
-    drawers = ['lighter']
-    garItems = ['gasoline']
-    def emptyItem(item):
-        del item[0]
+drawers = ['lighter']
+garItems = ['gasoline']
+def emptyItem(item):
+    del item[0]
 
 
 
-    megaCat = Character('Garfield', 9000, 50, ['Lasagna'])
-    Jon = Character('Jon', 200, 10, ['cigarette'])
+megaCat = Character('Garfield', 9000, 50, ['Lasagna'])
+Jon = Character('Jon', 200, 10, ['cigarette'])
 
     # Oddie = Character('Oddie', 200, 10, ['dog treat'])
     # Valette = Character('Valette',150, 20, ['cat toy'])
+
+def stars():
+    print('*****************************************************')
+
+def death():
+    print('Your hp has reached 0')
+    print('Garfield unhinges his jaws and the world fades to black')
+    # sleep(5)
+    print('You lose...\n')
+    playAgain = input('Want to play again? Y/N\n -->')
+    while playAgain != 'Y' and playAgain != 'N':
+        playAgain = input('Please type "Y" or "N"\n -->')
+    if playAgain == 'Y':
+        GarfieldLargerThanLife()
+    elif playAgain == 'N':
+        print('Garfieled wickedly waves goodbye')
+
+def GarfieldLargerThanLife():
 
 
     def gameStart():
@@ -239,18 +254,6 @@ def GarfieldLargerThanLife():
         elif choice == '3':
                 print('Goodbye' )
     #DEATH
-    def death():
-        print('Your hp has reached 0')
-        print('Garfield unhinges his jaws and the world fades to black')
-        # sleep(5)
-        print('You lose...\n')
-        playAgain = input('Want to play again? Y/N\n -->')
-        while playAgain != 'Y' and playAgain != 'N':
-            playAgain = input('Please type "Y" or "N"\n -->')
-        if playAgain == 'Y':
-            GarfieldLargerThanLife()
-        elif playAgain == 'N':
-            print('Garfieled wickedly waves goodbye')
     #GAROPTIONS
     def garageOptions():
         print('You are now in the Garage')
