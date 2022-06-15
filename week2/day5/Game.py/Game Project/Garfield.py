@@ -5,10 +5,9 @@
 
 # aim for mvp first
 
-import re
-from time import sleep
-from unicodedata import name
 
+from time import sleep
+import random
 def stars():
     print('*****************************************************')
 
@@ -69,6 +68,7 @@ def gameStart():
     # sleep(5)
     print( "You slowly unlock your door.\n")
     chooseRoom()
+
 def chooseRoom():
     print(''' Where would you like to go?
         1. The Kitchen  
@@ -80,37 +80,38 @@ def chooseRoom():
     door = input("--> ")
     while door != '1' and door != '2' and door != '3' and door != '4':
         door = input("Please enter a number 1 - 4-->  ")
+    if door == '4':
+        print('Garfield wickedly waves goodbye')
+        exit(0)
+    print('You are traveling.....')
+    randomAttack = random.randint(1,5)
+    stars()
+    if randomAttack == 1:
+        print('Garfield hears you shuffling in between rooms and attacks while you are in transit')
+        print('Garfield launches a sneak attack and hurries back into the vents')
+        Jon.hitByAttack(megaCat.attack)
+        print(f'Your health is now {Jon.health}')
+        stars()
     if door == '1':
-        kitchenEntry()
+        kitchen()
     if door == '2':
         garageOptions()
     if door == '3':
         outside()
-    if door == '4':
-        print('Garfield wickedly waves goodbye')
-        
-
-def kitchenEntry():
-    stars()
-    print('You cautiously make your way into the Kitchen.')
-    # sleep(3)
-    print('You notice an empty lasagna pan in the corner.')
-    # sleep(3)
-    print('You are overwhelmed by a foul stench.\n')
-    # sleep(3)
-    stars()
-    kitchen()
 
 def kitchen():
+    print('You are in the Kitchen')
     sleep(1.5)
     print('''What do you want do:
 
         1. Grab the nearby gun
         2. Search the kitchen drawers
-        3. Inspect the lasagna pan\n''')
+        3. Inspect the lasagna pan
+        4. Travel to a different room\n''')
+        
     stars()
     kitChoice = input('--> ')
-    while kitChoice != '1' and kitChoice != '2' and kitChoice != '3':
+    while kitChoice != '1' and kitChoice != '2' and kitChoice != '3' and kitChoice != '4':
         kitChoice = input("Please enter a number 1 - 3 -->  ")
     if kitChoice == "1":
         print('You grab the gun and begin to inspect it. The lights go out.')
@@ -174,7 +175,8 @@ bullet and responds in perfect english:''')
         kitchen()
 #KITCHEN OPTION 3
     elif kitChoice == '3':
-        print('You walk over and peer into the lasagna pan. The smell grows more intense.')
+        print('You walk over and peer into the lasagna pan.')
+        print('You are overwhelmed by a fowl stench.')
         print('You notice some strange remains at the bottom of the pan.')
         print('Every instinct you have is telling you to go back')
         # sleep(3)
@@ -184,6 +186,7 @@ bullet and responds in perfect english:''')
         2. Continue inspecting pan
         ''')
         
+
         gar3 = input('-->' )
         while gar3 != '1' and gar3 != '2':
             gar3 = input("Please enter a number 1 or 2 -->  ")   
@@ -197,10 +200,12 @@ bullet and responds in perfect english:''')
             print('He has a wide grin and says "You are the lasagna now, Jon."')
             # sleep(3)
             death()
+    elif kitChoice == '4':
+        chooseRoom()
 #Preface
 def preface():
     print(''' 
-This game was inspired by the Youtube series: Garfield Gameboy'd and is a horror/adventure game featuring Garfield the cat. 
+This game was inspired by the Youtube video: Garfield Gameboy'd and is a horror/adventure game featuring Garfield the cat. 
 Are you smart enough to out wit a 46 year old cat? lets find out in this decision based text game
 
 
@@ -277,6 +282,7 @@ While trying to force the box open you accidentally touch some live wires.''')
 #garfield message and say youve opened box
         Jon.hitByAttack(50)
         print(f'Your new health is {Jon.health}')
+        print('Something tells you this doesnt want to open...')
         if Jon.health != 0:
             garageOptions()
 #GARAGE CHOICE TWO
@@ -291,13 +297,22 @@ While trying to force the box open you accidentally touch some live wires.''')
 #GARAGE  CHOICE THREE
     elif garChoice == '3':
         print('You walk over towards the bag')
-        print
+        print("You find Oddie's lifeless body in the bag, attached is a note")
+        print('''Youre next jon....
+        
+        signed 
+        -G''')
+        print('The emotional damage of losing Oddie is too much, you lose 50 health')
+        Jon.hitByAttack(50)
+        print(f'Your new health is {Jon.health}')
+        garageOptions()
+
 #GARAGE TRAVEL
     elif garChoice == '4':
         chooseRoom()
 #OUTSIDE
 def outside():
-    print('You walk outside')
+    print('You are outside of the house')
     print('''What do you want to do
     1. Run for it.
     2. End it all.
@@ -305,21 +320,22 @@ def outside():
     4. Go back inside. 
     \n''')
     outChoice = input('-->')
-    while outChoice != '1' and outChoice != '2' and outChoice != '3':
+    while outChoice != '1' and outChoice != '2' and outChoice != '3'and outChoice != '4':
         outChoice = input('Please choose one of the above options only.')
     if outChoice == '1':
-        print('''As you being to tkae your first steps something tells you this isnt right...
+        print('''As you being to take your first steps something tells you this isnt right...
         This isn't how it ends.''')
-
+        outside()
     elif outChoice == '2':
-        if 'cigarette' in Jon.items and '1' in Jon.items and 'gasoline' in Jon.items:
+        if 'cigarette' in Jon.items and 'lighter' in Jon.items and 'gasoline' in Jon.items:
             endItAll()
         else:
             print('You do not have the required materials to end this nightmare.')
             print('You must go retrieve more items')
-            chooseRoom()
+            outside()
     elif outChoice == '3':
-        print
+        print('You search the backyard, but find nothing of use')
+        outside()
     elif outChoice == '4':
         chooseRoom()
 #ENDITALL
