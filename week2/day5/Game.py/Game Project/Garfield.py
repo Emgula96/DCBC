@@ -66,15 +66,15 @@ def gameStart():
     sleep(5)
     print('You need to put an end to this nightmare, once and for all.') 
     sleep(5)
-    print(
-    """
-    You slowly unlock your door, where would you like to go?
+    print( "You slowly unlock your door.\n")
+    chooseRoom()
+def chooseRoom():
+    print(''' Where would you like to go?
+        1. The Kitchen  
+        2. The Garage 
+        3. Outside the house
+        4. Quit''')
 
-    1. The Kitchen  
-    2. The Garage 
-    3. Outside the house
-    4. Quit
-""")
 
     door = input("--> ")
     while door != '1' and door != '2' and door != '3' and door != '4':
@@ -108,10 +108,10 @@ def kitchen():
         2. Search the kitchen drawers
         3. Inspect the lasagna pan\n''')
     stars()
-    garfield = input('--> ')
-    while garfield != '1' and garfield != '2' and garfield != '3':
-        garfield = input("Please enter a number 1 - 3 -->  ")
-    if garfield == "1":
+    kitChoice = input('--> ')
+    while kitChoice != '1' and kitChoice != '2' and kitChoice != '3':
+        kitChoice = input("Please enter a number 1 - 3 -->  ")
+    if kitChoice == "1":
         print('You grab the gun and begin to inspect it')
         sleep(4)
         print('You look up and see that Garfield has appeared in front of you!')
@@ -158,14 +158,14 @@ bullet and responds in perfect english:''')
             print('Please only type a number 1 - 2')
         
 #KITCHEN 2nd OPTIon
-    elif garfield == '2':
+    elif kitChoice == '2':
         #fix item counter here ==0 print drawers are empty
         drawers = ['Lighter']
         print(f'You search the drawers and find a {drawers}')
         Jon.addItmes('Lighter')
         kitchen()
 #KITCHEN OPTION 3
-    elif garfield == '3':
+    elif kitChoice == '3':
         print('You walk over and peer into the lasagna pan. The smell grows more intense.')
         print('You notice some strange remains at the bottom of the pan.')
         sleep(3)
@@ -205,7 +205,7 @@ created by Ethan Gula with a very basic understanding of Python 3, copyright 202
         if prefaceUser == 'Q':
             print("Goodbye" )
             break
-
+#MAIN MENU
 def mainMenu():
     print('\n   Welcome to "GARFIELD: LARGER THAN LIFE" ')
     sleep(3)
@@ -249,6 +249,7 @@ def garageOptions():
     garChoice = input('--> ')
     while garChoice != '1' and garChoice != '2' and garChoice != '3':
         garChoice = input("Please enter a number 1 - 3 -->  ")
+#GARAGE CHOICE ONE
     if garChoice == "1":
         print(''' 
         You walk over to the electrical box, but notice it doesnt want to open
@@ -264,11 +265,38 @@ def garageOptions():
         elif elect == '2':
             print('''
 While trying to force the box open you accidentally touch some live wires.''')
+#garfield message and say youve opened box
         Jon.hitByAttack(50)
         print(f'Your new health is {Jon.health}')
         garageOptions()
+#GARAGE CHOICE TWO
     elif garChoice == '2':
         print('')
+#GARAGE  CHOICE THREE
+
+def outside():
+    print('You walk outside')
+    print('''What do you want to do
+    1. Run for it
+    2. End it all.
+    3. Go back inside 
+    \n''')
+    outChoice = input('-->')
+    while outChoice != '1' and outChoice != '2' and outChoice != '3':
+        outChoice = input('Please choose one of the above options only.')
+    if outChoice == '1':
+        print('''As you being to tkae your first steps something tells you this isnt right...
+        This isn't how it ends.''')
+
+    elif outChoice == '2':
+        #condition statements to check inventory
+        if Jon.items != ['cigarette','lighter','gasoline']:
+            print('You do not have the required materials to end this nightmare.')
+            print('You must go inside and retreive')
+            chooseRoom()
+    elif outChoice == '3':
+        chooseRoom()
+
 
 
 
