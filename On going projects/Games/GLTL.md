@@ -7,7 +7,7 @@ Garfield: Larger Than Life is a python-based Adventure/Horror RPG to be run on t
 
 Ethan Gula
 
-[email me](Ethangula96@gmail.com) / [github](https://github.com/Emgula96/DCBC/tree/main/On%20going%20projects/Games)
+[Email Me, Click here](Ethangula96@gmail.com) / [github link](https://github.com/Emgula96/DCBC/tree/main/On%20going%20projects/Games)
 
 
 ## Requirements
