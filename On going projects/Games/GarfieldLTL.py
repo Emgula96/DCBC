@@ -49,7 +49,7 @@ Jon = Character('Jon', 200, 10, ['cigarette'])
     # Valette = Character('Valette',150, 20, ['cat toy'])
 
 def stars():
-    print('*****************************************************')
+    print('**********************************************************')
 
 def death():
     print('Your hp has reached 0')
@@ -62,11 +62,48 @@ def death():
     if playAgain == 'Y':
         GarfieldLargerThanLife()
     elif playAgain == 'N':
-        print('Garfieled wickedly waves goodbye')
+        print('Garfield wickedly waves goodbye')
 
 def GarfieldLargerThanLife():
 
+    #MAIN MENU
+    
+    def mainMenu():
+        print('\n   Welcome to "GARFIELD: LARGER THAN LIFE" ')
+        # sleep(3)
+        print("""
+                Main Menu\n\n
+        1. Play
+        2. Preface
+        3. Exit
+        """)
+        choice = input("Indicate how you wish to proceed by typing in the number you've chosen \n --> ")
+        while choice != '1' and choice != '2' and choice !='3':
+            choice = input('Please choose a number 1- 3\n -->')
+        if choice == '1':
+                gameStart()
+        elif choice == '2':
+                preface()
+        elif choice == '3':
+                print('Goodbye' )
+    #Preface
+    def preface():
+        print(''' 
+    This game was inspired by the Youtube video: Garfield Gameboy'd and is a horror/adventure game featuring Garfield the cat. 
+    Are you smart enough to out wit a 46 year old cat? lets find out in this decision based text game
 
+
+    created by Ethan Gula with a very basic understanding of Python 3, copyright 2022
+        ''')
+        prefaceUser = input('Please enter "B" for back or "Q" to quit \n -->' )
+        while prefaceUser != 'B' and prefaceUser != 'Q':
+            prefaceUser = input('Please input B or Q \n --> ' )
+        if prefaceUser == 'B':
+                mainMenu()
+        if prefaceUser == 'Q':
+            print("Goodbye" )
+            exit(0)
+#GAMESTART
     def gameStart():
         print('\nYou are playing as "Jon" your stats are listed below:\n')
         Jon.printChar()
@@ -76,21 +113,21 @@ def GarfieldLargerThanLife():
         # sleep(3)
         print("He is hiding somewhere in the house.....be careful.")
         # sleep(5)
-        print('The lights in the house are continuing to flicker')
+        print('The lights in the house are continuing to flicker.')
         print('Oddie has gone missing and you have been locked in your room for protection.')
         # sleep(5)
         print('You need to put an end to this nightmare, once and for all.') 
         # sleep(5)
         print( "You slowly unlock your door.\n")
+        stars()
         chooseRoom()
 
     def chooseRoom():
-        print(''' Where would you like to go?
+        print(''' Where would you like to go?\n
             1. The Kitchen  
             2. The Garage 
             3. Outside the house
             4. Quit''')
-
 
         door = input("--> ")
         while door != '1' and door != '2' and door != '3' and door != '4':
@@ -102,8 +139,8 @@ def GarfieldLargerThanLife():
         randomAttack = random.randint(1,5)
         stars()
         if randomAttack == 1:
-            print('Garfield hears you shuffling in between rooms and attacks while you are in transit')
-            print('Garfield launches a sneak attack and hurries back into the vents')
+            print('Garfield hears you shuffling in between rooms and attacks while you are in transit.')
+            print('Garfield launches a sneak attack and hurries back into the vents.')
             Jon.hitByAttack(megaCat.attack)
             print(f'Your health is now {Jon.health}')
             stars()
@@ -113,7 +150,7 @@ def GarfieldLargerThanLife():
             garageOptions()
         if door == '3':
             outside()
-
+#KITCHEN
     def kitchen():
         print('You are in the Kitchen')
         sleep(1.5)
@@ -147,7 +184,7 @@ def GarfieldLargerThanLife():
                 # sleep(2)
                 print('''\n\n
     The bullet demolishes one of Garfield's now 20 eyes. He suddenly appears as a 
-    15 foot monster with spider legs and a dark shroud fills the room.''')
+    15 foot monster with spider legs and a dark shroud fills the room.\n''')
                 Jon.attackBigBoi(megaCat)
                 garfieldhit()
                 # sleep(7)
@@ -155,14 +192,14 @@ def GarfieldLargerThanLife():
     Garfield is largely unaffected by the 
     bullet and responds in perfect english:''')
                 # sleep(4)
-                print(' Bullets. Wont. Work.\n')
+                print('     "Bullets. Wont. Work."\n')
                 stars()
                 # sleep(3)  
-                print('Garfield now lunges forward and attacks, causing damage and forcing the gun out of your hand')
+                print('Garfield now lunges forward and attacks, causing damage and forcing the gun out of your hand.')
                 Jon.hitByAttack(megaCat.attack)
                 print(f'Your health is now {Jon.health}')
                 # sleep(3)
-                print('You run to the garage')
+                print('You run to the garage.')
                 # sleep(3)
                 stars()
                 # sleep(4)
@@ -170,8 +207,8 @@ def GarfieldLargerThanLife():
             elif gun == '2':
                 print('You fire the warning shot.')
                 print('The lights come back on, but continue to flicker.')
-                print('Garfield stares at the new bullet hole in the hole, buying you time to escape.')
-                print('You run into the garage and lock the door behind you, you hear garfield climb into the vents')
+                print('Garfield stares at the new bullet hole in the wall, buying you time to escape.')
+                print('You run into the garage and lock the door behind you, you hear garfield climb into the vents.')
                 stars() #or ask where to flee/travel
                 garageOptions()
                 #some sort of break/escape
@@ -193,7 +230,7 @@ def GarfieldLargerThanLife():
             print('You walk over and peer into the lasagna pan.')
             print('You are overwhelmed by a fowl stench.')
             print('You notice some strange remains at the bottom of the pan.')
-            print('Every instinct you have is telling you to go back')
+            print('Every instinct you have is telling you to go back.')
             # sleep(3)
             print('''What do you want to do?
 
@@ -201,11 +238,11 @@ def GarfieldLargerThanLife():
             2. Continue inspecting pan
             ''')
             
-
             gar3 = input('-->' )
             while gar3 != '1' and gar3 != '2':
                 gar3 = input("Please enter a number 1 or 2 -->  ")   
             if gar3 == '1':
+                stars()
                 kitchen()
             elif gar3 == '2':
                 print("You feel a malevolant force push you into the pan.")
@@ -217,42 +254,6 @@ def GarfieldLargerThanLife():
                 death()
         elif kitChoice == '4':
             chooseRoom()
-    #Preface
-    def preface():
-        print(''' 
-    This game was inspired by the Youtube video: Garfield Gameboy'd and is a horror/adventure game featuring Garfield the cat. 
-    Are you smart enough to out wit a 46 year old cat? lets find out in this decision based text game
-
-
-    created by Ethan Gula with a very basic understanding of Python 3, copyright 2022
-        ''')
-        prefaceUser = input('Please enter "B" for back or "Q" to quit \n -->' )
-        while prefaceUser != 'B' and prefaceUser != 'Q':
-            prefaceUser = input('Please input B or Q \n --> ' )
-        if prefaceUser == 'B':
-                mainMenu()
-        if prefaceUser == 'Q':
-            print("Goodbye" )
-            exit(0)
-    #MAIN MENU
-    def mainMenu():
-        print('\n   Welcome to "GARFIELD: LARGER THAN LIFE" ')
-        # sleep(3)
-        print("""
-                Main Menu\n\n
-        1. Play
-        2. Preface
-        3. Exit
-        """)
-        choice = input("Indicate how you wish to proceed by typing in the number you've chosen \n --> ")
-        while choice != '1' and choice != '2' and choice !='3':
-            choice = input('Please choose a number 1- 3\n -->')
-        if choice == '1':
-                gameStart()
-        elif choice == '2':
-                preface()
-        elif choice == '3':
-                print('Goodbye' )
     #DEATH
     #GAROPTIONS
     def garageOptions():
@@ -269,7 +270,7 @@ def GarfieldLargerThanLife():
     #GARAGE CHOICE ONE
         if garChoice == "1":
             print(''' 
-            You walk over to the electrical box, but notice it doesnt want to open
+            You walk over to the electrical box, but notice it does'nt want to open
             Do you:
             1. Go back
             2. Try to pry it open''')
@@ -277,17 +278,17 @@ def GarfieldLargerThanLife():
             while elect != '1' and elect != '2':
                 elect = input("Please enter a number 1 or 2 -->  ")
             if elect == '1':
-                print ('You are now back in the center of the garage')
+                stars()
                 garageOptions()
             elif elect == '2':
                 print('''
-    While trying to force the box open you accidentally touch some live wires.''')
+        While trying to force the box open you accidentally touch some live wires.''')
     #garfield message and say youve opened box
             Jon.hitByAttack(50)
             print(f'Your new health is {Jon.health}')
-            print('Something tells you this doesnt want to open...')
-            if Jon.health != 0:
-                garageOptions()
+            print("Something tells you this doesn't want to open...")
+            stars()
+            garageOptions()
     #GARAGE CHOICE TWO
         elif garChoice == '2':
             if 'gasoline' in garItems:
@@ -301,17 +302,19 @@ def GarfieldLargerThanLife():
         elif garChoice == '3':
             print('You walk over towards the bag')
             print("You find Oddie's lifeless body in the bag, attached is a note")
-            print('''Youre next jon....
+            print('''You're next Jon....
             
-            signed 
-            -G''')
+signed, 
+        -G''')
             print('The emotional damage of losing Oddie is too much, you lose 50 health')
             Jon.hitByAttack(50)
             print(f'Your new health is {Jon.health}')
+            stars()
             garageOptions()
 
     #GARAGE TRAVEL
         elif garChoice == '4':
+            stars()
             chooseRoom()
     #OUTSIDE
     def outside():
@@ -319,15 +322,16 @@ def GarfieldLargerThanLife():
         print('''What do you want to do
         1. Run for it.
         2. End it all.
-        3. Search the backyard
+        3. Search the backyard.
         4. Go back inside. 
         \n''')
         outChoice = input('-->')
         while outChoice != '1' and outChoice != '2' and outChoice != '3'and outChoice != '4':
             outChoice = input('Please choose one of the above options only.')
         if outChoice == '1':
-            print('''As you being to take your first steps something tells you this isnt right...
-            This isn't how it ends.''')
+            print('''As you begin to take your first steps something tells you this isn't right...
+\n\nThis isn't how it ends.''')
+            stars()
             outside()
         elif outChoice == '2':
             if 'cigarette' in Jon.items and 'lighter' in Jon.items and 'gasoline' in Jon.items:
@@ -335,27 +339,37 @@ def GarfieldLargerThanLife():
             else:
                 print('You do not have the required materials to end this nightmare.')
                 print('You must go retrieve more items')
+                stars()
                 outside()
         elif outChoice == '3':
             print('You search the backyard, but find nothing of use')
+            stars()
             outside()
         elif outChoice == '4':
+            stars()
             chooseRoom()
     #ENDITALL
     def endItAll():
-        print('You pour gasloine all over the parimeter of the house')
+        print('You pour gasoline all over the perimeter of the house')
         # sleep(4)
         print('You use the lighter to light your cigarette')
         #sleep(4)
         print('After a few puffs you decide this is the only way')
-        print('You toss the lit cigarette to ignit the gas that has now soaked into the house')
-        print('You watch as your house burns to the ground. Its over.')
+        print('You toss the lit cigarette to ignit the gas that has now soaked into the house.')
+        print('You watch as your house burns to the ground. It\'s over.')
         sleep(8)
         print('''Ermerging from the flames are 40ft long bat wings, 
-    Garfield flys towards the heavens never to be seen again.
+Garfield flies towards the heavens never to be seen again.
                 ''')
+        stars()
         print('''A piece of burnt parchment falls in front of you. You can barely make out what it says:
-        "What comes next is all for you Jon"''')
+        "What comes next is all for you. Jon."''')
+        stars()
+        stars()
+        stars()
+        stars()
+        stars()
+        print('You survived! Thank you for playing!!')
     mainMenu()
 
 #GAME SEQUENCE
