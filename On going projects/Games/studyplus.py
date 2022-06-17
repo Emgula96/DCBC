@@ -341,7 +341,7 @@ signed,
             stars()
             outside()
         elif outChoice == '2':
-            if 'cigarette' in Jon.items and 'lighter' in Jon.items and 'gasoline' in Jon.items and 'Important Documents':
+            if 'cigarette' in Jon.items and 'lighter' in Jon.items and 'gasoline' in Jon.items and 'Important Documents' in Jon.items:
                 endItAll()
             else:
                 print('You do not have the required materials to end this nightmare.')
