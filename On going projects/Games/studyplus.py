@@ -108,20 +108,21 @@ def GarfieldLargerThanLife():
 
     def chooseRoom():
         print(''' Where would you like to go?\n
-            1. The Kitchen  
-            2. The Garage 
+            1. The Kitchen
+            2. The Garage  
             3. Outside the house
-            4. Quit''')
+            4. The Study
+            5. Quit''')
 
         door = input("--> ")
-        while door != '1' and door != '2' and door != '3' and door != '4':
+        while door != '1' and door != '2' and door != '3' and door != '4' and door != '5':
             door = input("Please enter a number 1 - 4-->  ")
-        if door == '4':
+        if door == '5':
             print('Garfield wickedly waves goodbye')
             exit(0)
         print('You are traveling.....')
         sleep(3)
-        randomAttack = random.randint(1,5)
+        randomAttack = random.randint(0,5)
         stars()
         if randomAttack == 1:
             print('Garfield hears you shuffling in between rooms and attacks while you are in transit.')
@@ -137,6 +138,9 @@ def GarfieldLargerThanLife():
             garageOptions()
         if door == '3':
             outside()
+        if door == '4':
+            study(vent)
+
 #KITCHEN
     def kitchen():
         print('You are in the Kitchen.')
@@ -249,6 +253,7 @@ bullet and responds in perfect english:''')
                 death()
         elif kitChoice == '4':
             chooseRoom()
+
     #DEATH
     #GAROPTIONS
     def garageOptions():
@@ -336,7 +341,7 @@ signed,
             stars()
             outside()
         elif outChoice == '2':
-            if 'cigarette' in Jon.items and 'lighter' in Jon.items and 'gasoline' in Jon.items:
+            if 'cigarette' in Jon.items and 'lighter' in Jon.items and 'gasoline' in Jon.items and 'Important Documents':
                 endItAll()
             else:
                 print('You do not have the required materials to end this nightmare.')
@@ -346,7 +351,9 @@ signed,
                 stars()
                 outside()
         elif outChoice == '3':
-            print('You search the backyard, but it is too dark outside to find anything.')
+            print('You search the backyard, and find a key.')
+            print('I wonder what it goes to...')
+            Jon.addItmes('desk key')
             stars()
             outside()
         elif outChoice == '4':
@@ -362,7 +369,105 @@ signed,
             GarfieldLargerThanLife()
         elif playAgain == 'N':
             print('Garfield wickedly waves goodbye')
-    
+
+    vent = 'open'
+    def study(vent):
+        print('You have arrived in the Study.')
+        print('''What would you like to do?
+
+        1. Inspect your desk
+        2. Close the open vent above the desk
+        3. Walk over to the bookshelf 
+        4. Tavel to a different room
+        ''')
+        stars()
+        studyInput = input('-->')
+        while studyInput != '1' and studyInput != '2' and studyInput != '3' and studyInput != '4':
+            studyInput = input('Please only enter a number 1 - 4 \n -->')
+
+        if studyInput == '1'and vent == 'open':
+            print('You walk over and sit down at your desk')
+            print('Oh no you forgot to shut the vent!!!')
+            print('Garfield claws you from inside the vent.')
+            sleep(3)
+            Jon.hitByAttack(megaCat.attack)
+            print(f'Your new health is {Jon.health}.')
+            print('You shut the vent preventing further onslaught.')
+            vent = 'closed'
+            sleep(3)
+            print('You should try and inspect the desk again.')
+            study(vent)
+        if studyInput == '1' and vent == 'closed':
+            print('You sit down and try to unlock your desk')
+            if 'desk key' in Jon.items:
+                print('You unlock the desk!')
+                sleep(2)
+                print('You gather all of your important documents')
+                sleep(2)
+                print('You now have nothing tying you to this place.')
+                sleep(2)
+                Jon.addItmes('Important Documents')
+                sleep(3)
+                stars
+                study(vent)
+            else: 
+                print('You try to unlock the desk but it wont budge.')
+                print('You need to go find the key!\n')
+                sleep(5)
+                stars()
+                study(vent)
+
+
+    #CLOSING VENT
+        elif studyInput == '2':
+            sleep(3)
+            print('You walk over and firmly close the vent.')
+            sleep(3)
+            print('You feel safer while in this room.')
+            sleep(2)
+            stars()
+            vent = 'closed'
+            study(vent)
+    # #BOOKSHELF
+        elif studyInput == '3':
+            print('You walk over to your bookshelf')
+            print('One black book catches your eye')
+            sleep(4)
+            print('You hold the book in your hands and feel an ominous power')
+            print('''The title of the book reads:
+            
+            Conjurings and Summonings of the Occult''')
+            sleep(3)
+            stars()
+            print('''Do you?
+            
+            1. Open the book
+            2. Put it back''')
+            book = input('-->')
+            while book != '1'and book != '2':
+                input('Please open the book or put it back, Id put it back.')
+            if book == '1':
+                print('You open the book and darkness fills the office')
+                print('Out of a portal Garfield is summoned')
+                sleep(5)
+                stars()
+                print('He now stands before you ready for one final fight. ')
+                stars()
+                print('You and Garfield have a fight to the death')
+                print('It doesnt end in your favor.')
+                sleep(3)
+                death()
+
+            elif book == '2':
+                print('You place the book back on the shelf')
+                print('I think you made the right choice...')
+                sleep(3)
+                stars()
+                study(vent)
+
+        elif studyInput =='4':
+            chooseRoom()
+
     mainMenu()
 
 #GAME SEQUENCE
