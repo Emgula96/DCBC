@@ -275,7 +275,7 @@ bullet and responds in perfect english:''')
     #GARAGE CHOICE ONE
         if garChoice == "1":
             print(''' 
-            You walk over to the electrical box, but notice it does'nt want to open
+            You walk over to the electrical box, but notice it doesn't want to open
             Do you:
 
             1. Go back
@@ -350,7 +350,7 @@ signed,
             else:
                 print('You do not have the required materials to end this nightmare.')
                 sleep(3)
-                print('You must go retrieve more items')
+                print('You must go retrieve more items.')
                 sleep(2)
                 stars()
                 outside()

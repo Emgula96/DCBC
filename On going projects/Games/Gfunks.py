@@ -8,19 +8,26 @@ def endAlltxt():
         print('You use the lighter to light your cigarette')
         sleep(4)
         print('After a few puffs you decide this is the only way')
-        print('You toss the lit cigarette to ignit the gas that has now soaked into the house.')
+        sleep(3)
+        print('You toss the lit cigarette to ignite the gas that has now soaked into the house.')
+        sleep(3)
         print('You watch as your house burns to the ground. It\'s over.')
         sleep(8)
         print('''Ermerging from the flames are 40ft long bat wings, 
 Garfield flies towards the heavens never to be seen again.
                 ''')
+        sleep(3)
         stars()
         print('''A piece of burnt parchment falls in front of you. You can barely make out what it says:
         "What comes next is all for you. Jon."''')
         stars()
+        sleep(3)
         stars()
+        sleep(3)
         stars()
+        sleep(3)
         stars()
+        sleep(3)
         stars()
         print('You survived! Thank you for playing!!')
 
