@@ -1,16 +1,6 @@
-#minimum
-# for loops
-# clean code
-# write article about what I dids  'dev.to'
-
-# aim for mvp first
-
 from time import sleep
 import random
 import Gfunks
-
-    # Oddie = Character('Oddie', 200, 10, ['dog treat'])
-    # Valette = Character('Valette',150, 20, ['cat toy'])
 
 def stars():
     print('**********************************************************')
@@ -43,7 +33,6 @@ def GarfieldLargerThanLife():
             print(f'Your current items are now..{self.items}')
 
         def printChar(self):
-            # print(self.name,self.health,self.attack,self.items[0])
             print(f'Name: {self.name}, Health: {self.health}, Attack: {self.attack}, Items: {self.items}')
         
         def hitByAttack(self, damage):
@@ -109,7 +98,7 @@ def GarfieldLargerThanLife():
         print("He is hiding somewhere in the house.....be careful.")
         sleep(5)
         print('The lights in the house are continuing to flicker.\n')
-        print('Oddie has gone missing and you have been locked in your room for protection.')
+        print('Odie has gone missing and you have been locked in your room for protection.')
         sleep(5)
         print('You need to put an end to this nightmare, once and for all.') 
         sleep(5)
@@ -213,6 +202,8 @@ bullet and responds in perfect english:''')
                 sleep(3)
                 print('Garfield stares at the new bullet hole in the wall, buying you time to escape.')
                 print('You run into the garage and lock the door behind you, you hear garfield climb into the vents.')
+                print('You drop the gun in all the commotion.')
+                sleep(7)
                 stars() #or ask where to flee/travel
                 garageOptions()
             else:
@@ -309,7 +300,7 @@ bullet and responds in perfect english:''')
         elif garChoice == '3':
             print('You walk over towards the bag')
             sleep(3)
-            print("You find Oddie's lifeless body in the bag, attached is a note\n")
+            print("You find Odie's lifeless body in the bag, attached is a note\n")
             sleep(3)
             print('''You're next Jon....
             
@@ -364,6 +355,14 @@ signed,
     #ENDITALL
     def endItAll():
         Gfunks.endAlltxt()
+    playAgain = input('Want to play again? Y/N\n -->')
+    while playAgain != 'Y' and playAgain != 'N':
+        playAgain = input('Please type "Y" or "N"\n -->')
+    if playAgain == 'Y':
+        GarfieldLargerThanLife()
+    elif playAgain == 'N':
+        print('Garfield wickedly waves goodbye')
+    
     mainMenu()
 
 #GAME SEQUENCE
