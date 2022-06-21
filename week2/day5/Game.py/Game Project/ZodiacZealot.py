@@ -69,7 +69,7 @@ class Zealot(Character):
                 while lvlup!= '1' and lvlup != '2':
                     input('Please choose Attack (1) or Defense(2).')
                 if lvlup == '1':
-                    self.mythicEnergy += 5
+                    self.mythicEnergy += 5  
                 elif lvlup == '2':
                     self.defense += 5
 
