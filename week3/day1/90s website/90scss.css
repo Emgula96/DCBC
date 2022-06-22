@@ -1,0 +1,84 @@
+*{
+    margin: 5;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background-color: rgb(149, 228, 46);
+}
+
+
+a{
+    margin: 15px;
+    text-decoration: none;
+    color: rgb(0, 0, 0) ;
+}
+
+a:hover{
+    text-decoration: underline;
+
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    font-size: large;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 50px;
+}
+
+.FFW{
+    width: 30%;
+    height: 350px;
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 25%;
+    color:mediumblue;
+    padding: 10px;
+    margin: 10px;
+}
+
+.button2{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 25%;
+    padding: 10px;
+    margin: 10px;
+    color: darkred;
+}
+
+.JOE{
+position: absolute;
+right: 1%;
+}
+
+#JF{
+    position: relative;
+    right: -92%;
+    
+}
+
+#topMenu{
+    display: flex;
+    justify-content: space-between;
+    font-size:x-large
+}
+
+#meet{
+    font-size: x-large
+}
+
+#NL{
+    display: flex;
