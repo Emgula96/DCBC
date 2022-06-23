@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS';
+    background-image: url(https://images.pexels.com/photos/1097491/pexels-photo-1097491.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.sign-upver1
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 300px;
+    background: whitesmoke;
+    padding: 20px;
+    margin: 10% auto 0;
+}
+
+.sign-upver1 h1{
+    color: rgb(32, 121, 90);
+    margin-bottom: 30px;
+}
+.input-box{
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    width:90%;
+    border: 1px solid black;
+
+}
+button{
+    color: whitesmoke;
+    width: 90%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.sign-up-btn, .sm-btn1, .sm-btn2{
+    background-color:rgb(32, 121, 90);
+}
+.sign-up-btn:hover{
+    cursor: pointer;
+    background-color: forestgreen;
+}
+.sm-btn1:hover{
+    cursor: pointer;
+    background-color: forestgreen;
+}
+.sm-btn2:hover{
+    cursor: pointer;
+    background-color: forestgreen;
+}
+a{
+    text-decoration: underline;
+}
+
+hr
+{
+    margin-top: 20px;
+    width: 80%;
+}
+.or{
+    background-color: whitesmoke;
+    width: 30px;
+    margin: -19px auto 10px;
+    ;
+}
+
+.sm-btn2{
+    margin-top: 15px;
+}
+img{
+    
+    height: 80px;
+    width: 80px;
+    margin-top: -60px;
+}

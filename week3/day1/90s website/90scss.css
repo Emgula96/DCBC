@@ -62,6 +62,7 @@ nav{
 .JOE{
 position: absolute;
 right: 1%;
+height: 300px;
 }
 
 #JF{
@@ -82,3 +83,4 @@ right: 1%;
 
 #NL{
     display: flex;
+}

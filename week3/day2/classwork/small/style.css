@@ -1,0 +1,62 @@
+/* .box{
+    border: 10px solid black;
+    display: flex;
+    height: 500px;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+
+} */
+/* .container{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.red
+{background-color: red;
+width: 33%;
+height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+.blue
+{background-color: blue;
+width: 33%;
+height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.yellow{
+    background-color: yellow;
+    width: 33%;
+    height: 400px;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+    .chessboard {
+        display: flex;
+        flex-wrap: wrap;
+        width: 800px;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .cell {
+        background-color: #ffce9e;
+        width: 100px;
+        height: 100px;
+    }
+
+    .row:nth-child(odd) > .cell:nth-child(even) {
+        background-color: #d18a46;
+    }
+
+    .row:nth-child(even) > .cell:nth-child(odd) {
+        background-color: #d18a46;
+    }

@@ -1,0 +1,18 @@
+.container{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+
+h1{
+    margin: 20px;
+    color: red;
+    border: 1px solid red;
+    padding: 20px;
+}

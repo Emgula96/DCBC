@@ -1,0 +1,16 @@
+/* .ticTac{
+    display: grid;
+    grid-template-columns: repeat(3,60px);
+}
+.ticTac > div{
+    background-color:
+    width: 60px;
+    height: 60px;
+    border: 2px solid black;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
