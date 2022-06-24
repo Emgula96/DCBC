@@ -14,3 +14,23 @@
     align-items: center;
 } */
 
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 800px;
+    grid-template-areas: 
+    "header header"
+    "content sidebar"
+    "footer footer"
+}
+
+.grid-header{
+    grid-area: header;
+}
+
+.body{
+    grid-area: content;
+}
+.footer{
+    grid-area: footer;
+}
