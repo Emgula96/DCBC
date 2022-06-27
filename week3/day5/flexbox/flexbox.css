@@ -1,0 +1,29 @@
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.sidebar{
+    display: flex;
+    border: 1px solid black;
+    height: 300px;
+    width: 20%;
+}
+.content{
+    display: flex;
+    border: 1px solid black;
+    height: 250px;
+    width: calc(100%);
+    margin: 10px;
+}
+.Mainbody{
+    display: flex;
+    gap: 15px;
+
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
