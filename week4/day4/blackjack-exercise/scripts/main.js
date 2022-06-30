@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", () => {});
 
 const getCard = () =>{
 const randomCard = Math.floor(Math.random()* deck.length -1) + 1;
-return deck.splice(randomCard, 1);
+return deck.splice(randomCard, 1)[0];
 
 }
 
@@ -38,8 +38,12 @@ return deck.splice(randomCard, 1);
 const initialDeal = () =>{
   const pCard1 = console.log(getCard())
   const pCard2 = console.log(getCard())
+  const pc1 = Object.values.pCard1[1]
+  const pc2 =
   const dCard1 = console.log(getCard())
   const dCard2 = console.log(getCard())
+  const dc1
+  const dc2
   console.log(deck)
 }
 initialDeal()
