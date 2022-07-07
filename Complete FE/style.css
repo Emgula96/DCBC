@@ -1,0 +1,15 @@
+#card{
+    background-color: rgba(24,24,27,0.6); 
+}
+#SearchItem{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 10;
+    color: whitesmoke;
+
+}
+body{
+    background: url('https://www.beaverstatefling.com/images/photos/photo05.jpg');
+    
+}
