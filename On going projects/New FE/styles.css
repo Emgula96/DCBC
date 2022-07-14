@@ -31,7 +31,7 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 20px;
     padding: 20px;
-    
+    padding-bottom: 250px;
 }
 .myBagDiscs {
     margin: 0;
@@ -40,6 +40,7 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 20px;
     padding: 20px;
+    padding-bottom: 270px;
 }
 
 .disc {

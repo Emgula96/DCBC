@@ -55,7 +55,12 @@ const displayDiscs = (discs) =>{
         const fl4 = document.createElement('span')
         const pic = document.createElement('img')
         const addBtn = document.createElement('button')
-        addBtn.onclick = () => addToBag(disc)
+        addBtn.onclick = () => {
+          addToBag(disc)
+          addBtn.innerHTML = 'In Bag'
+          addBtn.style.background = 'green';
+          addBtn.style.transition = '1s'
+        }
         name.innerHTML = disc.name
         brand.innerHTML = `Mfr: ${disc.brand}`
         category.innerHTML = `Type: ${disc.category}`
@@ -65,13 +70,12 @@ const displayDiscs = (discs) =>{
         fl4.innerHTML = ` ${disc.fade} `
         pic.src = disc.pic
         addBtn.innerHTML = 'Add to Bag'
-        addBtn.onclick = () => addBtn.innerHTML = 'Disc in Bag'
         flContainer.append(fl1,fl2,fl3,fl4)
         list.append(name,brand,category,flContainer,pic,addBtn)
         list.classList = 'disc'
         discList.append(list)
     };
-    
+      
 };
 let mybutton = document.getElementById("btn-back-to-top");
 

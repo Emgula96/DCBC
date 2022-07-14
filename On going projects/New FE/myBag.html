@@ -19,10 +19,11 @@
 
 
   <!-- ---------------NAVBAR------------ -->
-<section class = headerBar>
-  <nav>
-    <a href="index.html"> <img src="images/basketlogo.png" alt=""></a>
-    <div class="nav-links" id ='nav-links'>
+<div id = 'masterContainer'>
+    <section class = headerBar>
+    <nav>
+      <a href="index.html"> <img src="images/basketlogo.png" alt=""></a>
+      <div class="nav-links" id ='nav-links'>
         <!-- <button class= "window-close" onclick = "hideMenu()">Exit</button> -->
         <button type="button" class="btn-close" aria-label="Close" onclick = "hideMenu()"></button>
         <ul>
@@ -31,29 +32,31 @@
             <li><a href="myBag.html">My Bag</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-    </div>
-    <button class="bars" onclick="showMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-justify-right" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
-    </svg></button>
-  </nav>
-</section>
+      </div>
+      <button class="bars" onclick="showMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-justify-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+      </svg>
+      </button>
+    </nav>
+    </section>
 
-<section>
-  <h1>My Bag</h1>
-</section>
-<div id = 'bagContainer'>
-<ul class="myBagDiscs"></ul>
+    <h1>My Bag</h1>
+
+  <div id = 'bagContainer'>
+    <ul class="myBagDiscs"></ul>
+  </div>
+
+  <section id="footer">
+    <h4>@ The Hyzer Handbook</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sint aut veritatis natus. Aperiam, odit?</p>
+    <a href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="library.html">Disc Library</a>
+    <a href="myBag.html">My Bag</a>
+    <p>Made By Ethan Gula as part of my 2022 Bootcamp</p>
+  </section>
+
 </div>
-
-<section class="footer">
-  <h4>@ The Hyzer Handbook</h4>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sint aut veritatis natus. Aperiam, odit?</p>
-  <a href="contact.html">Contact</a>
-  <a href="index.html">Home</a>
-  <a href="library.html">Disc Library</a>
-  <a href="myBag.html">My Bag</a>
-  <p>Made By Ethan Gula as part of my 2022 Bootcamp</p>
-</section>
 
 </body>
 </html>

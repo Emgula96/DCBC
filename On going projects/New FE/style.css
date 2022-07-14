@@ -3,6 +3,24 @@
     padding: 0;
     font-family: 'Barlow', sans-serif;
 }
+/* html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+} */
+
+
+#masterContainer{
+    position: relative;
+    min-height: 100vh
+}
+
+
+#supremeContainer{
+    background: rgb(48,49,52);
+}
 .header{
     min-height: 100vh;
     width: 100%;
@@ -134,7 +152,7 @@ nav button{
 /* ----WHY???? ----- */
 
 .whyContainer{
-    background-color:rgba(211, 211, 211, 0.4)
+    background-color: whitesmoke;
 }
 
 .Why{
@@ -186,7 +204,7 @@ h3{
 
 /* ----FEATURED COURSES------ */
 .courseContainer{
-    background-color: rgba(211, 211, 211, 0.4)
+    background: whitesmoke;
 }
 
 .Courses{
@@ -268,6 +286,9 @@ h3{
 }
 
 /* --------OUR INFO--------- */
+.infoContainer{
+    background: whitesmoke;
+}
 
 .info{
     width: 80%;
@@ -295,6 +316,9 @@ h3{
 }
 
 /* --------Testimonials----- */
+.testiContainer{
+    background: whitesmoke;
+}
 
 .testi{
     width: 80%;
@@ -334,25 +358,27 @@ h3{
 }
 
 /* ---------FOOTER------------ */
-.footer{
+#footer{
+    position: absolute;
+    bottom: 0;
     background: rgb(48,49,52);
     color: whitesmoke;
     width: 100%;
     height: auto;
     text-align: center;
-    padding-top: 15px;
+    padding: 15px 0;
 }
-.footer p {
+#footer p {
     color: whitesmoke;
     margin-bottom: 25px;
     margin-top: 20px;
     font-weight: 600;
 }
-.footer a{
+#footer a{
     color: blanchedalmond;
-    padding: 20px;
+    padding: 15px;
 }
-.footer a:hover{
+#footer a:hover{
     color: #f44336;
     cursor: pointer;
 }
