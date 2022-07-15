@@ -28,7 +28,7 @@ Hyzer Handbook was created using  Java Script, HTML, CSS, and some bootstrap ele
 
 ### APIs 
 <ul>
-    <li>DiscITapi - https://discitapi.herokuapp.com/</li>
+    <li>DiscIT api - https://discitapi.herokuapp.com/</li>
 </ul>
 
 ## Goals
@@ -71,7 +71,7 @@ Any hangups were handled by referencing my notes, then google searching, and fin
 Our parameters were very loose on whether or not we could use a CSS framework such as: tailwind, bulma, or bootstrap. Since I wanted to build my CSS chops I decided to code most of my project in vanilla HTML, CSS, and JS. It took a little bit more time, but I liked having complete control over my elements and being able to see what style elements were being added where. 
 
 #### Working with an API:
-DiscIT API was great to work with and it contained all of the data I needed. Where I struggled was saving what the user would select to local storage. This was the biggest blocker for my project and when I figured out how local storage worked the rest of the project was a breeze. I am thankful I decided to use local storage as it was not something we went over during classtime and I am glad I now have the experience working with it and now have that in my developer toolbox for future projects.
+DiscIT API was great to work with and it contained all of the data I needed. Where I struggled was saving what the user would select to local storage. This was the biggest blocker for my project and when I figured out how local storage worked the rest of the project was a breeze. I am thankful I decided to use local storage as it was not something we went over during classtime. I now have the experience working with it and can have more confidence now that it is in my developer toolbox for future projects.
 
 ## Code Snippets
 
