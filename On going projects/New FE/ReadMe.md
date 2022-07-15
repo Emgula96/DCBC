@@ -76,6 +76,7 @@ DiscIT API was great to work with and it contained all of the data I needed. Whe
 ## Code Snippets
 
 Async functionc, event handler, and creating elements via JS:
+```
 const loadDiscs = async () => {
     try {
         const res = await fetch('https://discitapi.herokuapp.com/disc');
@@ -135,9 +136,6 @@ const displayDiscs = (discs) =>{
     };
       
 };
-
-```
-
 ```
 
 use of local storage to add or remove items:
