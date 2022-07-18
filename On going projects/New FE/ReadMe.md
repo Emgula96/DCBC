@@ -65,7 +65,7 @@ Hyzer Handbook was created using  Java Script, HTML, CSS, and some bootstrap ele
 #### Solo Project Planning:
 This project proved to be the most difficult at the beginning. I took several hours trying to decide what I wanted to do and how I wanted it to look. I then had to go and search for an API that would allow my project to be sucessful. I spent the first few hours setting up an minimal viable product on paper and aimed to just work on one small thing at a time. This preliminary plan allowed me to meet all of my goals and help me stay on task and not fall behind.
 
-Any hangups were handled by referencing my notes, then google searching, and finally by asking for help from my teacher/TA. Particular thanks to [Joe Fraiser] and [Violet] for their assistance.  
+Any hangups were handled by referencing my notes, then google searching, and finally by asking for help from my teacher/TA. Particular thanks to Joe Fraiser and Violet for their assistance.  
 
 #### Vanilla vs Framework:
 Our parameters were very loose on whether or not we could use a CSS framework such as: tailwind, bulma, or bootstrap. Since I wanted to build my CSS chops I decided to code most of my project in vanilla HTML, CSS, and JS. It took a little bit more time, but I liked having complete control over my elements and being able to see what style elements were being added where. 
