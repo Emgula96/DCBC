@@ -3,18 +3,10 @@
     padding: 0;
     font-family: 'Barlow', sans-serif;
 }
-/* html,body {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
-} */
-
 
 #masterContainer{
     position: relative;
-    min-height: 100vh
+    min-height: 100vh; 
 }
 
 
