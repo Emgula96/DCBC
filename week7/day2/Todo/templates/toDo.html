@@ -7,11 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
+
         <h1>To do List</h1>
-        ${task.map(task =>`
-            <h2>${task}</h2>
-            `).join('')}
-    </div>
+        <ul>
+        ${todoItems.map(todoItem => `
+            <li>${todoItem.task}</li>`).join('')}
+        </ul>
 </body>
 </html>

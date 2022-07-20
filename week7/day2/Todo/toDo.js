@@ -10,7 +10,6 @@ app.set('views', 'templates');
 app.set('view engine', 'html');
 app.use(express.static("public"));
 
-app.listen(PORT, console.log(`listening on port ${PORT}`))
 
 
 app.get("/",(req,res) =>{
@@ -27,6 +26,8 @@ app.get("/",(req,res) =>{
         { task: "Realize West is leaving us so that he can surf all day." },
     ];
     res.render('toDo',{locals:{
-        tasks: todoItems
+        todoItems
     }})
 });
+
+app.listen(PORT, console.log(`listening on port ${PORT}`))
