@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "Callie1704",
+    "database": "longboardTech_development",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "Callie1704",
+    "database": "longboardTech_test",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "Callie1704",
+    "database": "longboardTech_production",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
