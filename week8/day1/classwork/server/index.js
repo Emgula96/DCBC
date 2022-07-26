@@ -1,14 +1,30 @@
-const express = require("express")
-const app = express()
-const PORT = 3008
-// const bcrypt = require("bcrypt")
-// const {user} = require("../database/models")
+const express = require('express');
+const app = express();
+const PORT = 3008;
+const userRoutes = require("./user")
+const es6Renderer = require("express-es6-template-engine")
+const restaurantsRoutes = require('./restaurants');
+const { user } = require('../database/models');
+const bcrypt = require('bcrypt');
 const router = express.Router()
 
-const userRoutes = require("./user")
 
-app.use(express.json())
-app.use("/users",userRoutes)
+// middleware
+app.use(express.static("public"))
+app.engine("html", es6Renderer)
+app.set("views", "./public/views")
+app.set("view engine", "html")
+
+app.use(express.json());
+app.use("/users", userRoutes)
+app.use("/restaurants", restaurantsRoutes)
+
+
+app.get("/", function (req, res) {
+    res.render("index")
+})
+
+
 
 //Examples of stuff
 
