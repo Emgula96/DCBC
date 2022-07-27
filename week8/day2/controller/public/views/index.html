@@ -5,8 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link defer rel="stylesheet" href="../css/style.css">
+    <script src="../js/index.js"></script>
 </head>
 <body>
-    
+    <div class="container">
+        <h1 class="pets">Pets</h1>
+        ${Pets.map(pet => `
+            <h2>${pet.dataValues.name}</h2>`
+            ).join('')}
+        <h4>please enter the specifics to add your pet to the database</h4>
+    </div>
+    <div>
+        <input type="text" placeholder="Name of your pet">
+        <input type="text" placeholder="Species of your pet">
+        <input type="text" placeholder="Relative age of your pet">
+        <input type="text" placeholder="Weight of your pet">
+        <input type="text" placeholder="overall health of your pet">
+        <input type="text" placeholder="Unit of weight ">
+        <input type="text" placeholder="Owner's name">
+        <button>Submit</button>
+    </div>
 </body>
 </html>
