@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "entvkyof",
+    "password": "vY6e-6HJvFgA-i72FPHfAwOSopNxFAXb",
+    "database": "entvkyof",
+    "host": "raja.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "entvkyof",
+    "password": "vY6e-6HJvFgA-i72FPHfAwOSopNxFAXb",
+    "database": "entvkyof",
+    "host": "raja.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "entvkyof",
+    "password": "vY6e-6HJvFgA-i72FPHfAwOSopNxFAXb",
+    "database": "entvkyof",
+    "host": "raja.db.elephantsql.com",
+    "dialect": "postgres"
+  }
+}
