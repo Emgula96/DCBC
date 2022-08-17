@@ -38,12 +38,12 @@ export const Product = () => {
   return (
     <div>
       Product
-      {products.map(Product => {
+      {/* {products.map(Product => {
         return (
           <Link to={`/product/${product.id}`}>
           </Link>
         )
-      })}
+      })} */}
     </div>
   );
 };
