@@ -1,0 +1,15 @@
+body{
+  background-color: gray;
+  color: rgb(132,195,211);
+  text-align: center;
+}
+.movie-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.movie-poster{
+  max-width: 25vw;
+}
